@@ -1,0 +1,53 @@
+.designTshirt{
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: 50px auto;
+}
+.tshirt{
+   position: absolute;
+   width: 600px;
+    height: 500px;
+}
+.AddTextButton{
+    margin-top:20px;
+    text-align: center;
+}
+.AddTextButton p, .AddTextButton a{
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    background: rgb(0, 130, 190);
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    color: #ffffff;
+    margin-left: 30px;
+}
+
+.tshirt img{
+    width: 100%;
+ }
+#remove{
+    display: none;
+
+}
+.addTextContent input{
+    width: 80% !important;
+    height: 60px;
+}
+.addTextContent .textSubmit{
+display: inline-block;
+width: 120px;
+height: 60px;
+background: #ddc700;
+}
+#remove span{
+    margin-top: -18px;
+    display: block;
+    margin-left: -30px;
+    color: red;
+}
+

@@ -1,0 +1,61 @@
+html, body{
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 50px;
+    padding-bottom: 0px;
+    padding-top: 80px;
+    overflow: hidden;
+}
+.modal-header, .modal-footer{
+    border: none !important;
+}
+a:hover{
+    text-decoration: none !important;
+}
+.custom-heading {
+    position: relative;
+    margin-bottom: 20px;
+    h1{
+        font-weight: 700;
+    }
+}
+    .custom-heading::after {
+        position: absolute;
+        content: '';
+        top: 55px;
+        height: 2px;
+        width: 0px;
+        background: #7f8181;
+        -webkit-transition: all .7s ease; 
+    -o-transition: all .7s ease; 
+    transition: all.7s ease; 
+        
+        }
+    section:hover .custom-heading::after {
+            position: absolute;
+            content: '';
+            top: 55px;
+            height: 2px;
+            width: 200px;
+            background: $themeColor;
+            
+            }
+
+
+::placeholder, .custom-select{
+   color: #a7a7a7 !important;
+}
+input:focus, select:focus, textarea:focus{
+    outline: none;
+    box-shadow: 0 0 0 0rem rgba(0,123,255, 0) !important;
+}
+button{
+    border: none;
+    background: none;
+}
+button:focus {
+    outline: 0px dotted;
+    outline: 0px auto focus-ring-color;
+}

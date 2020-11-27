@@ -1,0 +1,457 @@
+$font-Satisfy:    'Satisfy', cursive;
+$themeColor:  #5658dd;
+@import "global";
+@import "themeColor";
+@import "common";
+@import "mixin";
+
+
+
+.topAddress{
+    @extend %bgGradient;
+    padding: 15px 0px;
+    color: #ffffff;
+    .topSocial {
+        a{
+            background: #ffffff;
+            color: $themeColor;
+            margin: 0 5px;
+            @include widthHeight(35px);
+            font-size: 16px;
+            display: inline-block;
+            line-height: 35px;
+            border-radius: 50px;
+            text-align: center;
+        }
+    }
+}
+
+
+
+.navBlock{
+    @include transition(.7s);
+    nav{
+        @extend %bgGradient;
+        @include transition(.7s);
+        a{
+            color: #ffffff;
+            padding: 10px 20px !important;
+        }
+    }
+}
+.banner{
+    clip-path: polygon(100% 0, 100% 100%, 91% 80%, 0 100%, 0 0);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    border: 0px solid transparent !important;
+    overflow: hidden;
+    .banner-carousel{
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        .banner-image{
+            height: 100vh;
+            width: 100%;
+            img{
+                height: 100vh;
+                width: 100%;
+                object-fit: cover;
+                object-position: center bottom;
+            }
+        }
+       
+    }
+    .banner-content{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.50);
+        height: 100%;
+        width: 100%;
+        z-index: 99999;
+        .banner-heading{
+            position: absolute;
+            bottom: 55%;
+            transform: translateY(55%);
+            left: 5%;
+            color: #ffffff;
+            h2{
+                font-weight: 600;
+                font-size: 60px;
+                text-shadow: 0px 0px 5px #000000;
+                span{
+                    font-family: $font-Satisfy;
+                }
+            }
+            h1{
+                font-size: 80px;
+                font-weight: 600;
+                text-shadow: 0px 0px 5px #000000;
+             }
+           
+        }
+    }
+}
+
+
+
+.modal-content{
+    @extend %bgGradient;
+    color: #ffffff;
+}
+.about-us-section{
+    padding-top: 80px !important;
+}
+.about-us-img{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    img{
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    
+    }
+    .video-button {
+        position: absolute;
+       line-height: 80px;
+       text-align: center;
+       bottom: 50%;
+       right: 50%;
+       font-size: 35px;
+     transform: translate( 50%, 50%) !important;
+       color: $themeColor;
+        border-radius: 1000px;
+        @include transition(.3s);
+        cursor: pointer;
+        }
+        ::after {
+            content: '';
+            position: absolute;
+            width: 30px; height: 30px;
+            border-radius: 100%;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: ring 1.5s infinite;
+          }
+
+}
+
+  
+  @keyframes ring {
+    0% {
+      @include widthHeight(30px);
+      opacity: 1;
+      background: $themeColor;
+    }
+    50% {
+        @include widthHeight(100px);
+      opacity: .5;
+      background: none;
+    }
+    100% {
+        @include widthHeight(200px);
+        opacity: 0;
+        background: none;
+      }
+  }
+
+
+  .service-item{
+    @extend %boxShadow;
+    padding: 30px;
+    border-radius: 4px;
+    position: relative;
+    h3{
+        text-align: center;
+        margin-top: 30px;
+    }
+    p{
+        text-align: justify;
+       
+    }
+    i{
+        position: absolute;
+        top: -50px;
+        @include widthHeight(100px);
+        border-radius: 100%;
+        text-align: center;
+        line-height: 100px;
+        font-size: 30px;
+        justify-content: center;
+        right: 50%;
+        transform: translateX(50%);
+        color: $themeColor;
+        background: #ffffff;
+        @include transition(.7s);
+        @extend %boxShadow;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        @extend %bgGradient;
+        @include widthHeight(0px);
+        z-index: -1;
+        border-radius: 5px;
+        @include transition(1s);
+    }
+    
+    &:hover::after{
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0;
+        @extend %bgGradient;
+        @include widthHeight(100%);
+        z-index: -1;
+        border-radius: 5px;
+    }
+   
+
+}
+
+.subscribe-form{
+    @extend %bgGradient;
+    form{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        input{
+            border: none !important;
+            margin-bottom: 0px;
+            border-radius: 0px !important;
+            background-color: transparent !important;
+            border-bottom: 1px solid #006f80  !important;
+            height: 50px !important;
+            color: #ffffff !important;
+        }
+        ::placeholder{
+            color: #cacaca !important;
+        }
+        .subscribe-btn {
+            display: block;
+            width: 100%;
+           height: 50px;
+            border: 2px solid #006f80 ;
+            border-radius: 0px  30px 30px 0px;
+            cursor: pointer;
+            i{
+                color: #ffffff;
+             }
+        }
+    }
+}
+ 
+.team-part{
+    position: relative;
+    width: 100%;
+    height: 380px;
+    .team-photo{
+        @include widthHeight(100%);
+        position: absolute;
+        z-index: 99;
+        left: 50%;
+        transform: translateX(-50%);
+        img{
+            @include widthHeight(100%);
+            object-fit: cover;
+            object-position: center;
+            @include transition(.5s);
+        }
+      
+    }
+    .team-desc{
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        @include transition(.7s);
+        h4{
+            font-family: 'Satisfy', cursive;
+        }
+        .team-social-media{
+            margin-top: 10px;
+            a{
+                border: 1px solid $themeColor;
+                @include widthHeight(40px);
+                display: inline-block;
+                font-size: 18px;
+                line-height:  40px;
+                margin: 12px !important;
+                margin-top: 0px;
+                transform: rotate(45deg);
+                @include transition(.5s);
+                i{
+                    color: $themeColor;
+                    @include transition(.5s);
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    
+    }
+    &:hover{
+        border-radius: 4px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        @extend %boxShadow;
+        .team-photo {
+            @include widthHeight(150px);
+            img {
+                @include widthHeight(150px);
+                object-fit: cover;
+                object-position:top center;
+                border-radius: 50%;
+            }
+           
+        }
+        .team-desc {
+            position: absolute;
+            top: 190px;
+            width: 100%;
+           
+        }
+    }
+}
+
+
+.satisfaction{
+   
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background-image: url(../../Components/Images/satisfaction.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    h1{
+        color: #ffffff;
+        font-size: 50px;
+        font-weight: 600;
+        text-shadow: 0px 0px 5px #000000;
+        z-index: 99999;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.45);
+     
+      
+    }
+}
+
+.blog-image{
+    position: relative;
+    span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 10px;
+        background: rgba(86,88,221, .8);
+        height: 40px;
+        width: 120px;
+        line-height: 40px;
+        text-align: center;
+        color: #ffffff;
+    }
+}
+
+.contact-us{
+    background: url(https://krazyit.com/images/contacts.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 80px !important;
+    h1{
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    input, select{
+        margin-bottom: 0px;
+        border-radius: 0px !important;
+        background-color: transparent !important;
+        border: 1px solid #006f80  !important;
+        height: 50px !important;
+        color: #3b3b3b !important;
+    }
+    textarea{
+        border-radius: 0px !important;
+        background-color: transparent !important;
+        border: 1px solid #006f80  !important;
+        color: #3b3b3b !important;
+    }
+    option{
+       @extend %bgGradient;
+        padding-bottom: 20px;
+    }
+    .contact-btn{
+        color: #ffffff;
+        margin-top: 30px;
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+       height: 50px;
+       @extend %bgGradient;
+       border-radius: 4px;
+       @include transition(.5s);
+        cursor: pointer;
+    }
+    .contact-btn:hover{
+        color: #01869b;
+        margin-top: 30px;
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+       height: 50px;
+       background: none;
+       border: 1px solid #006f80  !important;
+       border-radius: 4px;
+    }
+}
+
+
+footer{
+    height: 100%;
+    padding: 130px 50px 50px;
+    @extend %bgGradient;
+    color: #ffffff;
+-webkit-clip-path: polygon(84% 0, 100% 100px, 100% 100%, 50% 100%, 0 100%, 0% 100px); clip-path: polygon(84% 0, 100% 100px, 100% 100%, 50% 100%, 0 100%, 0% 100px);
+    .footerLogo img{
+        width: 200px;
+        margin-bottom: 10px;
+    }
+    p{
+        margin: 0 !important;
+    }
+    .footerSocial{
+        a{
+            display: inline-block;
+            background: #ffffff;
+        color: $themeColor;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        @include widthHeight(35px);
+        font-size: 16px;
+        display: inline-block;
+        line-height: 35px;
+        border-radius: 50px;
+        text-align: center;
+        }
+    }
+
+}
+
+
+
+
